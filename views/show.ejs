@@ -1,0 +1,32 @@
+<% include partials/header %>
+<div style="margin-top:70px" class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <p class="lead">עוד דוגמאות</p>
+            <div class="list-group">
+                <li class="list-group-item active">דוגמא1</li>
+                <li class="list-group-item">דוגמא2</li>
+                <li class="list-group-item">דוגמא 3</li>
+            </div>
+        </div>
+        <div class="col-md-7">
+                <div class="thumbnail">
+                        <img style="width: 100%;  max-height: 400px;" src="<%=product.image%>">
+                        <div class="caption-full">
+                        <h2 class="pull-right"><a><%=product.name%></a></h2>
+                            <h3 ><%=product.price%></h3>
+                            <hr>
+                            <p> <%= product.description%> </p>
+                            
+                            
+                                    <a class="ui inverted red button pull-right" href="/blogs/<%= product._id%>">  <i class="heart icon"></i> הוסף למועדפים</a>         
+                                    <a class="ui inverted green button button" href="/blogs/<%= product._id%>"> <i class="shop icon"></i>המשך לתשלום </a>         
+
+                                
+
+                        </div>
+               </div>
+               
+
+</div>
+<% include partials/footer %>

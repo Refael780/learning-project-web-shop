@@ -1,0 +1,62 @@
+<%include partials/header%>
+<h1></h1>
+<div class="ui main text  segment">
+    <div style="text-align:center; font-family:'Amatic SC', cursive; font-size: 10em;" class="ui huge header">עגלת קניות
+    </div>
+    <div class="ui to attached segment">
+        <div class="ui divided items">
+
+            <% product.forEach(function(element) {%>
+            <div class="item">
+
+                <div class="content pull-right">
+
+                    <a class="header pull-right" href="/products/<%=element._id%>"><%=element.name%></a>
+                    <br>
+                    <div class="meta pull-right">
+
+                        <span><%= element.price%></span>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div class="meta pull-right">
+                        <span> <%=element._id%>: מספר פריט</span>
+
+                    </div>
+
+
+                    <div class="description pull-right">
+
+
+                        <p class=" pull-right"><%= element.description%> ...</p>
+
+                    </div>
+
+
+                    <div class="extra">
+                        <a class="ui inverted  violet button pull-right" href="/products/<%=element._id%>">הזמנה</a>
+
+                    </div>
+
+
+
+                </div>
+                <div class="image">
+
+                    <img style="width: 100%; margin-left: 8px; padding:0" src="<%=element.image[0] %>">
+
+
+                </div>
+
+
+
+            </div>
+            <%});%>
+
+        </div>
+    </div>
+</div>
+
+
+<%include partials/footer%>
